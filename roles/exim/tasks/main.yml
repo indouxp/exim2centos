@@ -1,14 +1,14 @@
 ---
 # tasks file for exim
-  - vars:
 
-  - name: exim
+  - name: yum install exim
     yum: 
       name: exim
       state: latest
-    template:
-      src: ../files/exim.conf
-      dest: /etc/exim
+  - name: exim conf
+    copy:
+      src: files/exim.conf
+      dest: /etc/exim/exim.conf
       owner: root
       group: root
       mode: 0644
