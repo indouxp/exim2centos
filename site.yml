@@ -1,0 +1,8 @@
+---
+- name: deploy exim to localhost
+  hosts: all
+  become: yes
+  become_user: root
+
+  roles:
+    - exim
